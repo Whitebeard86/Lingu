@@ -1,7 +1,16 @@
 'use strict';
 
 angular.module('lingu')
-    .controller('LoginCtrl',
+  .controller('LoginCtrl',
     function ($scope, $rootScope) {
+
+      $scope.userInfo = {
+        username: "",
+        password: ""
+      };
+
+      $scope.submitLoginRequest = function () {
+
+      };
 
     });
