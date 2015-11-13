@@ -1,1 +1,11 @@
 /* Empty. Add your own CSS if you like */
+.logo {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical-align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
