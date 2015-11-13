@@ -3,13 +3,13 @@
 
     <div class="list">
         <label class="item item-input">
-            <input type="text" placeholder="Username">
+            <input type="text" ng-model="userInfo.username" placeholder="Username">
         </label>
         <label class="item item-input">
-            <input type="password" placeholder="Password">
+            <input type="password" ng-model="userInfo.password" placeholder="Password">
         </label>
     </div>
-    <button class="button button-positive button-block">
+    <button class="button button-positive button-block" ng-click="submitLoginRequest()">
         {{'login' | translate}}
     </button>
 </div>
