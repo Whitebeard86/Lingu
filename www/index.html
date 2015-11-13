@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Lingu</title>
@@ -19,15 +19,20 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <script src="js/languages/en.js"></script>
+    <script src="js/languages/pt.js"></script>
     <script src="js/app.js"></script>
 
+
+    <!-- IMPORTED MODULES -->
+    <script src="lib/angular-translate/angular-translate.js"></script>
     <script sr="js/imported/socket.io.js"></script>
 
     <script src="js/controllers/LoginCtrl.js"></script>
-  </head>
-  <body ng-app="lingu">
+</head>
+<body ng-app="lingu">
 
-  <ion-nav-view></ion-nav-view>
+<ion-nav-view></ion-nav-view>
 
-  </body>
+</body>
 </html>
