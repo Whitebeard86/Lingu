@@ -1,3 +1,5 @@
 var EN_LANGUAGE =  {
-    'login': 'Login'
+    'login': 'Login',
+    'rules': 'Rules',
+    'back': 'Back'
 };

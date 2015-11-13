@@ -22,6 +22,10 @@ angular.module('lingu', ['ionic', 'pascalprecht.translate'])
             .state('login', {
                 url: '/login',
                 templateUrl: 'views/login.html'
+            })
+            .state('rules', {
+                url: '/rules',
+                templateUrl: 'views/rules.html'
             });
         $urlRouterProvider
             .otherwise('/login');
