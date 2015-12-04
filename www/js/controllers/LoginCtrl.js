@@ -2,7 +2,7 @@
 
 angular.module('lingu')
     .controller('LoginCtrl',
-    function ($scope, $rootScope) {
+    function ($scope, comlayerSvc) {
         var socket;
         $scope.userInfo = {
             username: "",
@@ -10,17 +10,16 @@ angular.module('lingu')
         };
 
         $scope.submitLoginRequest = function () {
-            socket = io('ws://172.18.135.193:8080');
+            comlayerSvc.connect().then(function(){
+                comlayerSvc.send({
+                    action: 2,
+                    username: $scope.userInfo.username,
+                    password: $scope.userInfo.password
+                })
+            }, function(){
 
-            socket.on('connect', function () {
-                console.log("connected to server");
-                socket.emit('message', JSON.stringify(
-                    {
-                        action: 2,
-                        username: $scope.userInfo.username,
-                        password: $scope.userInfo.password
-                    }));
             });
+
         };
 
     });
