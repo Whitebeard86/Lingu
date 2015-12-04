@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('lingu')
-    .controller('LoginCtrl',
+.controller('LoginCtrl',
     function ($scope, comlayerSvc) {
         var socket;
         $scope.userInfo = {
@@ -10,13 +10,19 @@ angular.module('lingu')
         };
 
         $scope.submitLoginRequest = function () {
-            comlayerSvc.connect().then(function(){
+            comlayerSvc.connect().then(function () {
                 comlayerSvc.send({
                     action: 2,
                     username: $scope.userInfo.username,
                     password: $scope.userInfo.password
-                })
-            }, function(){
+                }).then(
+                    function (result) {
+                        console.log(result);
+                    }, function (error) {
+                        console.log(error);
+                    }
+                )
+            }, function () {
 
             });
 

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('lingu')
-    .factory('comlayerSvc',
+.factory('comlayerSvc',
     function ($q) {
         var svc = {},
             socket,
@@ -32,12 +32,8 @@ angular.module('lingu')
             if (connected) {
                 var deferred = $q.defer();
 
-                socket.emit('message', JSON.stringify(content), function (error, message) {
-                        if (error) {
-                            deferred.reject(error);
-                        } else {
-                            deferred.resolve(message);
-                        }
+                socket.emit('message', JSON.stringify(content), function (result) {
+                        deferred.resolve(result);
                     }
                 );
                 return deferred.promise;
