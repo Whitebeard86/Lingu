@@ -31,6 +31,10 @@ angular.module('lingu', ['ionic', 'pascalprecht.translate'])
                 url: '/registration',
                 templateUrl: 'views/registration.html'
             })
+            .state('scores', {
+                url: '/scores',
+                templateUrl: 'views/scores.html'
+            })
             .state('loading', {
                 url: '/loading',
                 templateUrl: 'views/loading.html'
