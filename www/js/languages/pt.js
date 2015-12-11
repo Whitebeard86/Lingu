@@ -7,5 +7,6 @@ var PT_LANGUAGE =  {
     'faq': 'Como jogar',
     'username': 'Utilizador',
     'xp': 'Experiência',
-    'register': 'Registar'
+    'register': 'Registar',
+    'waiting': 'À espera de um jogador'
 };

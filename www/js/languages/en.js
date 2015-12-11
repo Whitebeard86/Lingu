@@ -7,5 +7,6 @@ var EN_LANGUAGE =  {
     'faq': 'How to play',
     'username': 'Username',
     'xp': 'Experience',
-    'register': 'Register'
+    'register': 'Register',
+    'waiting': 'Waiting for player'
 };
