@@ -9,23 +9,30 @@ angular.module('lingu')
             password: ""
         };
 
+        $scope.login = function() {
+            comlayerSvc.send({
+                action: 2,
+                username: $scope.userInfo.username,
+                password: $scope.userInfo.password
+            }).then(
+                function (result) {
+                    console.log(result);
+                }, function (error) {
+                    console.log(error);
+                }
+            )
+        };
+
         $scope.submitLoginRequest = function () {
-            comlayerSvc.connect().then(function () {
-                comlayerSvc.send({
-                    action: 2,
-                    username: $scope.userInfo.username,
-                    password: $scope.userInfo.password
-                }).then(
-                    function (result) {
-                        console.log(result);
-                    }, function (error) {
-                        console.log(error);
-                    }
-                )
-            }, function () {
+            if(!comlayerSvc.isConnected()) {
+                comlayerSvc.connect().then(function () {
+                    $scope.login();
+                }, function () {
 
-            });
-
+                });
+            } else {
+                $scope.login();
+            }
         };
 
     });

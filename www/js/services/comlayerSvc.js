@@ -7,6 +7,10 @@ angular.module('lingu')
             socket,
             connected;
 
+        svc.isConnected = function() {
+            return svc.connected;
+        };
+
         svc.connect = function () {
             var deferred = $q.defer();
             if (!connected) {
@@ -14,13 +18,13 @@ angular.module('lingu')
 
                 socket.on('connect', function () {
                     console.log("connected to server");
-                    connected = true;
+                    svc.connected = true;
                     deferred.resolve();
                 });
 
                 socket.on('disconnect', function () {
                     console.log("disconnected from server");
-                    connected = false;
+                    svc.connected = false;
                     deferred.reject();
                 });
                 return deferred.promise;
@@ -29,7 +33,7 @@ angular.module('lingu')
         };
 
         svc.send = function (content) {
-            if (connected) {
+            if (svc.connected) {
                 var deferred = $q.defer();
 
                 socket.emit('message', JSON.stringify(content), function (result) {
