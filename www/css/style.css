@@ -21,7 +21,9 @@
 }
 
 .login-page input[type=text],
-.login-page input[type=password] {
+.login-page input[type=password],
+.login-page input[type=email],
+div > form > input[type=submit]{
     color: #fff;
     background: #343434;
     border: none;
@@ -54,4 +56,8 @@ button {
 .rules-header {
     color: white;
     background: #343434;
+}
+
+input.ng-invalid {
+    border: 2px solid #c0392b !important;
 }

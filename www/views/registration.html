@@ -1,0 +1,10 @@
+<div class="login-page vertical-align-center wrapper" ng-controller="LoginCtrl">
+    <!--<img class="logo" src="img/logo.png"/>-->
+
+    <form ng-submit="register()">
+        <input type="email" ng-model="userInfo.email" placeholder="Email" required>
+        <input type="text" ng-model="userInfo.username" placeholder="Username" required>
+        <input type="password" ng-model="userInfo.password" placeholder="Password" required>
+        <input value="{{'register' | translate}}" type="submit"/>
+    </form>
+</div>

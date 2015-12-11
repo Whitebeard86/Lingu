@@ -6,5 +6,6 @@ var PT_LANGUAGE =  {
     'score': 'Melhores resultados',
     'faq': 'Como jogar',
     'username': 'Utilizador',
-    'xp': 'Experiência'
+    'xp': 'Experiência',
+    'register': 'Registar'
 };

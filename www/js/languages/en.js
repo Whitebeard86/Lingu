@@ -6,5 +6,6 @@ var EN_LANGUAGE =  {
     'score': 'High Score',
     'faq': 'How to play',
     'username': 'Username',
-    'xp': 'Experience'
+    'xp': 'Experience',
+    'register': 'Register'
 };
