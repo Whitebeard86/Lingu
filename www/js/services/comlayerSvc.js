@@ -10,7 +10,7 @@ angular.module('lingu')
         svc.connect = function () {
             var deferred = $q.defer();
             if (!connected) {
-                socket = io('ws://172.18.135.193:8080');
+                socket = io('ws://localhost:8080');
 
                 socket.on('connect', function () {
                     console.log("connected to server");

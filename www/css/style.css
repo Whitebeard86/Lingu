@@ -9,3 +9,33 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.login-page {
+    background: #262626;
+    padding: 20px;
+}
+
+.login-page input[type=text],
+.login-page input[type=password] {
+    color: #fff;
+    background: #343434;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border-top: 1px solid #282828;
+    padding: 24px 12px;
+    font-size: 1.1em;
+}
+
+button {
+    border: 1px solid #323232;
+    border-bottom: 1px solid #212121;
+    background: #323232;
+    border-radius: 6px;
+    padding: 16px 6px;
+    font-size: 1.1em;
+    color: #fff;
+}
