@@ -10,6 +10,7 @@ angular.module('lingu')
             $scope.userInfo.username = playerSvc.playerInfo.name;
             $scope.userInfo.email = playerSvc.playerInfo.email;
             $scope.userInfo.xp = playerSvc.playerInfo.xp;
+            $scope.userInfo.avatar = playerSvc.playerInfo.avatar;
             setLevel();
         }());
 

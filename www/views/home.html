@@ -1,14 +1,9 @@
 <div class="vertical-align-center wrapper" ng-controller="HomeCtrl">
-    <a class="item item-icon-left" href="#">
-        <i class="icon ion-person"></i>
-        {{'username' | translate}}: {{userInfo.username}}
-    </a>
-
-    <a class="item item-icon-left" href="#">
-        <i class="icon ion-person"></i>
-        {{'email' | translate}}: {{userInfo.email}}
-    </a>
-
+    <div class="item item-avatar">
+        <img src="{{userInfo.avatar}}"/>
+        <h2>{{'username' | translate}}: {{userInfo.username}}</h2>
+        <p>{{'email' | translate}}: {{userInfo.email}}</p>
+    </div>
     <a class="item item-icon-left" href="#">
         <i class="icon ion-star"></i>
         {{'xp' | translate}}: {{userInfo.level}}
