@@ -2,8 +2,7 @@
 
 angular.module('lingu')
 .controller('LoginCtrl',
-    function ($scope, comlayerSvc, playerSvc) {
-        var socket;
+    function ($rootScope, $scope, comlayerSvc, playerSvc, $location) {
         $scope.userInfo = {
             username: "",
             password: ""
@@ -12,8 +11,7 @@ angular.module('lingu')
         $scope.login = function() {
             playerSvc.authenticate($scope.userInfo.username, $scope.userInfo.password).then(
                 function () {
-                    // TODO: handle login..
-                    console.log(playerSvc.playerInfo);
+                   $location.path('home');
                 }, function (error) {
                     // TODO: retry?
                     console.log(error);
@@ -32,5 +30,4 @@ angular.module('lingu')
                 $scope.login();
             }
         };
-
     });

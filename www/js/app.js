@@ -41,7 +41,8 @@ var app = angular.module('lingu', ['ionic', 'pascalprecht.translate'])
             })
             .state('home', {
                 url: '/home',
-                templateUrl: 'views/home.html'
+                templateUrl: 'views/home.html',
+                cache: false
             });
         $urlRouterProvider
             .otherwise('/login');

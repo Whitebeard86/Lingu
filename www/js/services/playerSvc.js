@@ -21,7 +21,8 @@ angular.module('lingu')
                             id: result.id,
                             name: result.name,
                             email: result.email,
-                            avatar: result.avatar
+                            avatar: result.avatar,
+                            xp: result.experience
                         };
 
                         defer.resolve();
