@@ -9,5 +9,6 @@ var PT_LANGUAGE =  {
     'email': 'Email',
     'xp': 'Nível',
     'register': 'Registar',
-    'waiting': 'À espera de um jogador'
+    'waiting': 'À espera de um jogador',
+    'invalidLogin': 'O seu user e/ou password são inválidos'
 };

@@ -9,5 +9,6 @@ var EN_LANGUAGE =  {
     'email': 'Email',
     'xp': 'Level',
     'register': 'Register',
-    'waiting': 'Waiting for player'
+    'waiting': 'Waiting for player',
+    'invalidLogin': 'You user and/or password are incorrect'
 };

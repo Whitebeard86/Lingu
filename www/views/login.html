@@ -1,11 +1,8 @@
 <div class="login-page vertical-align-center wrapper" ng-controller="LoginCtrl">
-    <!--<img class="logo" src="img/logo.png"/>-->
-
-    <div class="list">
-        <input type="text" ng-model="userInfo.username" placeholder="Username">
-        <input type="password" ng-model="userInfo.password" placeholder="Password">
-    </div>
-    <button ng-click="submitLoginRequest()">
-        {{'login' | translate}}
-    </button>
+    <form ng-submit="submitLoginRequest()">
+        <input type="text" ng-model="userInfo.username" placeholder="Username" required>
+        <input type="password" ng-model="userInfo.password" placeholder="Password" required>
+        <p ng-if="errorLogin" class="account-invalid">{{'invalidLogin' | translate }}</p>
+        <input value="{{'login' | translate}}" type="submit"/>
+    </form>
 </div>

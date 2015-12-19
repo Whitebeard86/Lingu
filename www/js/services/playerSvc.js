@@ -26,6 +26,8 @@ angular.module('lingu')
                         };
 
                         defer.resolve();
+                    } else {
+                        defer.reject();
                     }
                 }, function (error) {
                     console.log(error);

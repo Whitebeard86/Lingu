@@ -58,7 +58,7 @@ button {
     background: #343434;
 }
 
-input.ng-invalid {
+input.ng-dirty.ng-invalid {
     border: 2px solid #c0392b !important;
 }
 
@@ -108,4 +108,10 @@ progress::-webkit-progress-value {
     background: #282828;
     border-radius: 15px;
     box-shadow:0px 0px 6px #666 inset;
+}
+
+.account-invalid {
+    color: red;
+    text-align: center;
+    font-weight: bold;
 }

@@ -12,8 +12,9 @@ angular.module('lingu')
             playerSvc.authenticate($scope.userInfo.username, $scope.userInfo.password).then(
                 function () {
                    $location.path('home');
+                    $scope.errorLogin = false;
                 }, function (error) {
-                    // TODO: retry?
+                    $scope.errorLogin = true;
                     console.log(error);
                 }
             )
