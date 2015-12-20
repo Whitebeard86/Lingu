@@ -39,6 +39,11 @@ var app = angular.module('lingu', ['ionic', 'pascalprecht.translate'])
                 url: '/loading',
                 templateUrl: 'views/loading.html'
             })
+            .state('match', {
+                url: '/match',
+                templateUrl: 'views/match.html',
+                cache: false
+            })
             .state('home', {
                 url: '/home',
                 templateUrl: 'views/home.html',

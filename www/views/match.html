@@ -1,0 +1,25 @@
+<div class="vertical-align-center wrapper" ng-controller="MatchCtrl">
+
+    <div class="item item-avatar">
+        <img src="{{player1.avatar}}">
+        <h2>{{player1.name}}</h2>
+        <p>{{player1.xp}}</p>
+    </div>
+    <div class="item item-avatar">
+        <img src="{{player1.avatar}}">
+        <h2>Player2</h2>
+        <p>Victories</p>
+    </div>
+    <div class="list card">
+        <div class="item item-image">
+            <img class="choice-img" src="http://pad1.whstatic.com/images/thumb/a/a1/Draw-a-Banana-Intro.jpg/900px-Draw-a-Banana-Intro.jpg">
+        </div>
+    </div>
+    <div class="choices">
+        <button>banana</button>
+        <button>orange</button>
+        <button>strawberry</button>
+        <button>raspberry</button>
+    </div>
+    <h2 class="countdown" ng-click="callCounter()">{{currentCount}}</h2>
+</div>

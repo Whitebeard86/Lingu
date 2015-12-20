@@ -115,3 +115,24 @@ progress::-webkit-progress-value {
     text-align: center;
     font-weight: bold;
 }
+
+.choice-img {
+    width: 200px;
+    height: 200px;
+}
+
+.choices {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.choices > button {
+    width: 30%;
+    margin-right: 10px;
+}
+
+.countdown {
+    color: white;
+    text-align: center;
+}
