@@ -10,5 +10,6 @@ var PT_LANGUAGE =  {
     'xp': 'Nível',
     'register': 'Registar',
     'waiting': 'À espera de um jogador',
-    'invalidLogin': 'O seu user e/ou password são inválidos'
+    'invalidLogin': 'O seu user e/ou password são inválidos',
+    'ar': 'Realidade aumentada'
 };

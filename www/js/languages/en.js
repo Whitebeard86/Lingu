@@ -10,5 +10,6 @@ var EN_LANGUAGE =  {
     'xp': 'Level',
     'register': 'Register',
     'waiting': 'Waiting for player',
-    'invalidLogin': 'You user and/or password are incorrect'
+    'invalidLogin': 'You user and/or password are incorrect',
+    'ar': 'Augmented Reality'
 };

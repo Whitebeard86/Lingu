@@ -1,7 +1,9 @@
 <div class="vertical-align-center wrapper" ng-controller="HomeCtrl">
     <div class="item item-avatar">
         <img src="{{userInfo.avatar}}"/>
+
         <h2>{{'username' | translate}}: {{userInfo.username}}</h2>
+
         <p>{{'email' | translate}}: {{userInfo.email}}</p>
     </div>
     <a class="item item-icon-left" href="#">
@@ -11,6 +13,9 @@
         <progress id="progressBar" max="100" value="{{userInfo.xp}}"></progress>
     </a>
     <button style="margin-top: 5em" ng-href="#/home">{{'play' | translate}}</button>
+    <a style="text-align: center;text-decoration: none"
+       ng-href="http://isep.vitormota.org/ar&user={{userInfo.username}}&avatar={{userInfo.avatar}}"
+       target="_blank">{{'ar' | translate}}</a>
     <button go-click="scores">{{'score' | translate}}</button>
     <button go-click="rules">{{'faq' | translate}}</button>
 </div>
