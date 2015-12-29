@@ -7,7 +7,13 @@ angular.module('lingu')
             socket,
             connected;
 
-        svc.isConnected = function() {
+        svc.messageHandlers = [];
+
+        svc.addMessageHandler = function (handler) {
+            svc.messageHandlers.push(handler);
+        };
+
+        svc.isConnected = function () {
             return svc.connected;
         };
 
@@ -22,11 +28,23 @@ angular.module('lingu')
                     deferred.resolve();
                 });
 
+                socket.on('message', function (message) {
+                    console.log("raw message received: " + message);
+
+                    var decoded = JSON.parse(message);
+                    for (var k in svc.messageHandlers) {
+                        if(svc.messageHandlers[k]) {
+                            svc.messageHandlers[k](decoded);
+                        }
+                    }
+                });
+
                 socket.on('disconnect', function () {
                     console.log("disconnected from server");
                     svc.connected = false;
                     deferred.reject();
                 });
+
                 return deferred.promise;
             }
             return $q.reject();

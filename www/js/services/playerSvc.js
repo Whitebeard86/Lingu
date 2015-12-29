@@ -5,6 +5,31 @@ angular.module('lingu')
     function ($q, comlayerSvc) {
         var svc = {};
         svc.playerInfo = {};
+        svc.state = 0; // 0 = idle; 1 = matchmaking; 2 = playing
+
+        comlayerSvc.addMessageHandler(function(message) {
+            switch(message.action) {
+                case 4: // matchmaking ready
+                    // is the player still in matchmaking?
+                    if(svc.state == 1) {
+                        comlayerSvc.send({
+                            action: 5,
+                            matchId: message.matchId
+                        });
+                    }
+
+                    break;
+                case 6:
+                    // TODO: received order to initiate game, change to game view here and save adversary info (message.players[])..
+                    console.warn("TODO: received order to initiate game, change to game view here and save adversary info (message.players[])..");
+
+                    break;
+            }
+        });
+
+        svc.changeState = function(newState) {
+          svc.state = newState;
+        };
 
         svc.authenticate = function (username, password) {
             var defer = $q.defer();

@@ -9,7 +9,7 @@ var EN_LANGUAGE =  {
     'email': 'Email',
     'xp': 'Level',
     'register': 'Register',
-    'waiting': 'Waiting for player',
+    'waiting': 'Searching Player',
     'invalidLogin': 'You user and/or password are incorrect',
     'ar': 'Augmented Reality'
 };
