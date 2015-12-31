@@ -2,7 +2,7 @@
 
 angular.module('lingu')
 .factory('playerSvc',
-    function ($q, comlayerSvc) {
+    function ($q, comlayerSvc, $location, $rootScope) {
         var svc = {};
         svc.playerInfo = {};
         svc.state = 0; // 0 = idle; 1 = matchmaking; 2 = playing
@@ -20,9 +20,7 @@ angular.module('lingu')
 
                     break;
                 case 6:
-                    // TODO: received order to initiate game, change to game view here and save adversary info (message.players[])..
-                    console.warn("TODO: received order to initiate game, change to game view here and save adversary info (message.players[])..");
-
+                    $rootScope.$broadcast('BEGIN_GAME', message.players);
                     break;
             }
         });
