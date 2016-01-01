@@ -35,5 +35,5 @@ angular.module('lingu')
 
         function isSamePlayer(email) {
             return $scope.player1.email === email;
-        };
+        }
     });

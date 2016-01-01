@@ -140,3 +140,12 @@ progress::-webkit-progress-value {
     color: white;
     text-align: center;
 }
+
+.btn-back-scores {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.score-player-ctn {
+    max-height: 100px;
+}

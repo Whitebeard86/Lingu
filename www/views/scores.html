@@ -1,27 +1,15 @@
-<div class="wrapper">
+<div class="wrapper" ng-controller="RankingCtrl">
     <div class="list">
-
-        <div class="item item-button-right">
-            Player 1
-            <button class="button button-positive">
-                <i class="icon ion-person"></i>
-            </button>
+        <div ng-repeat="p in players track by $index" class="item item-button-right score-player-ctn">
+            <b># {{$index + 1}}</b>
+            <br>
+            <b>Username:</b> {{p.username}}
+            <br>
+            <b>XP:</b> {{p.experience}}
+            <div class="item-thumbnail-right">
+                <img src="{{p.avatar_url}}">
+            </div>
         </div>
-
-        <div class="item item-button-right">
-            Player 2
-            <button class="button button-positive">
-                <i class="icon ion-person"></i>
-            </button>
-        </div>
-
-        <div class="item item-button-right">
-            Player 3
-            <button class="button button-positive">
-                <i class="icon ion-person"></i>
-            </button>
-        </div>
-
     </div>
-    <button style="width: 100%; margin-top: 1em" go-click="home">{{'back' | translate}}</button>
+    <button class="btn-back-scores" go-click="home">{{'back' | translate}}</button>
 </div>
