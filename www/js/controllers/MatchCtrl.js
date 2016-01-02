@@ -52,6 +52,11 @@ angular.module('lingu')
             $scope.$apply();
         });
 
+        $scope.$on('OPPONENT_ANSWERED_CORRECTLY', function(){
+            $scope.player2.correctAnswers++;
+            $scope.$apply();
+        });
+
         function isSamePlayer(email) {
             return $scope.player1.email === email;
         }

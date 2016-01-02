@@ -2,14 +2,22 @@
 
 angular.module('lingu')
     .factory('gameSvc',
-    function () {
+    function (comlayerSvc, $rootScope) {
         var gameSvc = {};
         var categories = ['COLORS', 'FRUITS'];
         var NUMBER_OF_CORRECT_ANSWERS = 0;
         var CURRENT_CATEGORY;
         var CURRENT_OPTION;
         var options;
-        var optionsChosen;
+        var matchId;
+
+        comlayerSvc.addMessageHandler(function (message) {
+            switch (message.action) {
+                case 9:
+                    $rootScope.$broadcast('OPPONENT_ANSWERED_CORRECTLY');
+                    break;
+            }
+        });
 
         var game = {
             'COLORS': [
@@ -39,8 +47,7 @@ angular.module('lingu')
                     value: 'Yellow',
                     options: ['Yellow', 'Red', 'Black', 'Green']
                 }
-            ]
-            ,
+            ],
             'FRUITS': [
                 {
                     img: '../../img/game/fruit/Apple.png',
@@ -83,7 +90,10 @@ angular.module('lingu')
 
         function addCorrectAnswer() {
             NUMBER_OF_CORRECT_ANSWERS = NUMBER_OF_CORRECT_ANSWERS + 1;
-            //broadcast to the core
+            comlayerSvc.send({
+                action: 9,// PLAYER_ANSWERED_CORRECTLY
+                matchId: matchId
+            });
         }
 
         function setCurrentCategory() {
@@ -99,8 +109,12 @@ angular.module('lingu')
             return options;
         };
 
+        gameSvc.setMatchId = function (mId) {
+            matchId = mId;
+        };
+
         gameSvc.checkAnswer = function (answer) {
-            if(answer === CURRENT_OPTION.value) {
+            if (answer === CURRENT_OPTION.value) {
                 addCorrectAnswer();
             } else {
 
@@ -113,7 +127,7 @@ angular.module('lingu')
             return options;
         };
 
-        gameSvc.getCorrectAnswers = function() {
+        gameSvc.getCorrectAnswers = function () {
             return NUMBER_OF_CORRECT_ANSWERS;
         };
 
