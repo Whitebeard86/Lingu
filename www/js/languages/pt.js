@@ -12,5 +12,8 @@ var PT_LANGUAGE =  {
     'waiting': 'À espera de um jogador',
     'invalidLogin': 'O seu user e/ou password são inválidos',
     'ar': 'Realidade aumentada',
-    'logout': 'Sair'
+    'logout': 'Sair',
+    'matchOver': 'Partida terminada',
+    'elapsedTime': 'O sem tempo: ',
+    'yourScore': 'O teu resultado: '
 };

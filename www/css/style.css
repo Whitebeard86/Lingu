@@ -149,3 +149,13 @@ progress::-webkit-progress-value {
 .score-player-ctn {
     max-height: 100px;
 }
+
+.count-down-red {
+    color: red;
+}
+
+.match-over {
+    color: white;
+    text-align: center;
+    padding-top: 100px
+}

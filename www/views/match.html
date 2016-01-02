@@ -6,6 +6,8 @@
             <h2>{{player1.name}}</h2>
 
             <p>{{player1.xp}}</p>
+
+            <p>{{player1.correctAnswers}}</p>
         </div>
         <div class="item item-avatar">
             <img src="{{player2.avatar}}">
@@ -13,20 +15,28 @@
             <h2>{{player2.name}}</h2>
 
             <p>{{player2.xp}}</p>
+
+            <p>{{player2.correctAnswers}}</p>
         </div>
-        <div class="list card">
+        <div class="list card" ng-if="option">
             <div class="item item-image">
                 <img class="choice-img"
-                     src="http://pad1.whstatic.com/images/thumb/a/a1/Draw-a-Banana-Intro.jpg/900px-Draw-a-Banana-Intro.jpg">
+                     src="{{option.img}}">
             </div>
         </div>
-        <div class="choices">
-            <button>banana</button>
-            <button>orange</button>
-            <button>strawberry</button>
-            <button>raspberry</button>
+        <div class="choices" ng-if="option">
+            <button ng-repeat="op in option.options" ng-click="checkAnswer(op)">{{op}}</button>
         </div>
-        <h2 class="countdown" ng-click="callCounter()">{{currentCount}}</h2>
+
+        <div ng-if="!option">
+            <h3 class="match-over">{{'matchOver' | translate}}
+                <br>
+                {{'elapsedTime' | translate}} {{elapsedTime}}
+                <br>
+                {{'yourScore' | translate}} {{player1.correctAnswers}}
+            </h3>
+        </div>
+        <h2 class="countdown" ng-if="option" ng-class="{'count-down-red': timerLessThan10S()}">{{currentCount}}</h2>
     </div>
     <div ng-if="loading">
         <div class="vertical-align-center wrapper">

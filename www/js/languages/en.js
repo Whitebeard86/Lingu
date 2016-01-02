@@ -12,5 +12,8 @@ var EN_LANGUAGE =  {
     'waiting': 'Searching Player',
     'invalidLogin': 'You user and/or password are incorrect',
     'ar': 'Augmented Reality',
-    'logout': 'Logout'
+    'logout': 'Logout',
+    'matchOver': 'Match Over!',
+    'elapsedTime': 'Your time: ',
+    'yourScore': 'Your Score: '
 };
