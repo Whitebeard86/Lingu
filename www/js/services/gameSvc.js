@@ -4,7 +4,7 @@ angular.module('lingu')
     .factory('gameSvc',
     function () {
         var gameSvc = {};
-        var categories = ['COLORS'];
+        var categories = ['COLORS', 'FRUITS'];
         var NUMBER_OF_CORRECT_ANSWERS = 0;
         var CURRENT_CATEGORY;
         var CURRENT_OPTION;
@@ -13,7 +13,6 @@ angular.module('lingu')
 
         var game = {
             'COLORS': [
-
                 {
                     img: '../../img/game/colors/Blue.png',
                     value: 'Blue',
@@ -41,15 +40,35 @@ angular.module('lingu')
                     options: ['Yellow', 'Red', 'Black', 'Green']
                 }
             ]
-            /*,
-             'FRUIT': {
-             'APPLE': '../../img/game/fruit/Apple.png',
-             'BANANA': '../../img/game/fruit/Banana.png',
-             'ORANGE': '../../img/game/fruit/Orange.png',
-             'PINEAPPLE': '../../img/game/fruit/Pineapple.png',
-             'STRAWBERRY': '../../img/game/fruit/Strawberry.png',
-             options: ['Apple', 'Banana', 'Orange', 'Pineapple', 'Strawberry', 'Watermelon', 'Melon']
-             }*/
+            ,
+            'FRUITS': [
+                {
+                    img: '../../img/game/fruit/Apple.png',
+                    value: 'Apple',
+                    options: ['Apple', 'Banana', 'Orange', 'Pineapple']
+                }
+                ,
+                {
+                    img: '../../img/game/fruit/Banana.png',
+                    value: 'Banana',
+                    options: ['Orange', 'Watermelon', 'Pineapple', 'Banana']
+                },
+                {
+                    img: '../../img/game/fruit/Orange.png',
+                    value: 'Orange',
+                    options: ['Watermelon', 'Strawberry', 'Orange', 'Banana']
+                },
+                {
+                    img: '../../img/game/fruit/Pineapple.png',
+                    value: 'Pineapple',
+                    options: ['Watermelon', 'Pineapple', 'Apple', 'Melon']
+                },
+                {
+                    img: '../../img/game/fruit/Strawberry.png',
+                    value: 'Strawberry',
+                    options: ['Strawberry', 'Pineapple', 'Apple', 'Watermelon']
+                }
+            ]
         };
 
 
