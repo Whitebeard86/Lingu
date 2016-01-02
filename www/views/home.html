@@ -15,10 +15,11 @@
 
     <div class="vertical-align-center wrapper">
         <button style="margin-top: 5em" go-click="match">{{'play' | translate}}</button>
-        <a style="text-align: center;text-decoration: none"
+        <a ng-if="false" style="text-align: center;text-decoration: none"
            ng-href="http://isep.vitormota.org/ar&user={{userInfo.username}}&avatar={{userInfo.avatar}}"
            target="_blank">{{'ar' | translate}}</a>
         <button go-click="scores">{{'score' | translate}}</button>
         <button go-click="rules">{{'faq' | translate}}</button>
+        <button ng-click="logout()" go-click="login">{{'logout' | translate}}</button>
     </div>
 </div>

@@ -11,5 +11,6 @@ var EN_LANGUAGE =  {
     'register': 'Register',
     'waiting': 'Searching Player',
     'invalidLogin': 'You user and/or password are incorrect',
-    'ar': 'Augmented Reality'
+    'ar': 'Augmented Reality',
+    'logout': 'Logout'
 };

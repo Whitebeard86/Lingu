@@ -11,5 +11,6 @@ var PT_LANGUAGE =  {
     'register': 'Registar',
     'waiting': 'À espera de um jogador',
     'invalidLogin': 'O seu user e/ou password são inválidos',
-    'ar': 'Realidade aumentada'
+    'ar': 'Realidade aumentada',
+    'logout': 'Sair'
 };

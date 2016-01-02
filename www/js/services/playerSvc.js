@@ -61,6 +61,10 @@ angular.module('lingu')
             return defer.promise;
         };
 
+        svc.logout = function() {
+            svc.playerInfo = {};
+        };
+
         return svc;
 
     });
