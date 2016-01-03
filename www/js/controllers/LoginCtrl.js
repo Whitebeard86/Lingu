@@ -2,7 +2,7 @@
 
 angular.module('lingu')
 .controller('LoginCtrl',
-    function ($rootScope, $scope, comlayerSvc, playerSvc, $location) {
+    function ($rootScope, $scope, comlayerSvc, playerSvc, $location, $translate) {
         $scope.userInfo = {
             username: "",
             password: ""
@@ -30,5 +30,9 @@ angular.module('lingu')
             } else {
                 $scope.login();
             }
+        };
+
+        $scope.setLanguage = function(lan) {
+            $translate.use(lan);
         };
     });
