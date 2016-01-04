@@ -25,7 +25,8 @@ var app = angular.module('lingu', ['ionic', 'pascalprecht.translate'])
             })
             .state('rules', {
                 url: '/rules',
-                templateUrl: 'views/rules.html'
+                templateUrl: 'views/rules.html',
+                cache: false
             })
             .state('registration', {
                 url: '/registration',

@@ -1,19 +1,8 @@
-<div class="wrapper">
+<div class="wrapper" ng-controller="RulesCtrl">
     <div class="item item-divider rules-header">
-        {{ 'rules' | translate }}
+        {{ 'faq' | translate }}
     </div>
-    <div class="item item-text-wrap rules-panel">
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
-        This is a basic Card with some text.
+    <div class="item item-text-wrap rules-panel" ng-bind-html="howtoplay">
     </div>
     <button style="width: 100%; margin-top: 1em" go-click="home">{{'back' | translate}}</button>
 </div>
