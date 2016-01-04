@@ -6,6 +6,7 @@ var EN_LANGUAGE =  {
     'score': 'High Score',
     'faq': 'How to play',
     'username': 'Username',
+    'password': 'Password',
     'email': 'Email',
     'xp': 'Level',
     'register': 'Register',
@@ -15,5 +16,7 @@ var EN_LANGUAGE =  {
     'logout': 'Logout',
     'matchOver': 'Match Over!',
     'elapsedTime': 'Your time: ',
-    'yourScore': 'Your Score: '
+    'yourScore': 'Your Score: ',
+    'correctAnswers': '# of correct answers: ',
+    'xp_match': 'Experience: '
 };

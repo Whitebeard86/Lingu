@@ -5,18 +5,18 @@
 
             <h2>{{player1.name}}</h2>
 
-            <p>{{player1.xp}}</p>
+            <p><b>{{'xp_match' | translate}}</b>{{player1.xp}}</p>
 
-            <p>{{player1.correctAnswers}}</p>
+            <p><b>{{'correctAnswers' | translate}}</b>{{player1.correctAnswers}}</p>
         </div>
         <div class="item item-avatar">
             <img src="{{player2.avatar}}">
 
             <h2>{{player2.name}}</h2>
 
-            <p>{{player2.xp}}</p>
+            <p><b>{{'xp_match' | translate}}</b>{{player2.xp}}</p>
 
-            <p>{{player2.correctAnswers}}</p>
+            <p><b>{{'correctAnswers' | translate}}</b>{{player2.correctAnswers}}</p>
         </div>
         <div class="list card" ng-if="option">
             <div class="item item-image">

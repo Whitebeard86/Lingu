@@ -6,6 +6,7 @@ var PT_LANGUAGE =  {
     'score': 'Melhores resultados',
     'faq': 'Como jogar',
     'username': 'Utilizador',
+    'password': 'Palavra-chave',
     'email': 'Email',
     'xp': 'Nível',
     'register': 'Registar',
@@ -15,5 +16,7 @@ var PT_LANGUAGE =  {
     'logout': 'Sair',
     'matchOver': 'Partida terminada',
     'elapsedTime': 'O sem tempo: ',
-    'yourScore': 'O teu resultado: '
+    'yourScore': 'O teu resultado: ',
+    'correctAnswers': 'Nº de respostas corretas: ',
+    'xp_match': 'Experiência: '
 };

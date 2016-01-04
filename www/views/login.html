@@ -1,7 +1,7 @@
 <div class="login-page vertical-align-center wrapper" ng-controller="LoginCtrl">
     <form ng-submit="submitLoginRequest()">
-        <input type="text" ng-model="userInfo.username" placeholder="Username" required>
-        <input type="password" ng-model="userInfo.password" placeholder="Password" required>
+        <input type="text" ng-model="userInfo.username" placeholder="{{'username' | translate}}" required>
+        <input type="password" ng-model="userInfo.password" placeholder="{{'password' | translate}}" required>
 
         <p ng-if="errorLogin" class="account-invalid">{{'invalidLogin' | translate }}</p>
         <input value="{{'login' | translate}}" type="submit"/>
