@@ -12,7 +12,7 @@ var EN_LANGUAGE =  {
     'register': 'Register',
     'waiting': 'Searching Player',
     'invalidLogin': 'You user and/or password are incorrect',
-    'ar': 'Augmented Reality',
+    'ar': 'Check your profile in AR',
     'logout': 'Logout',
     'matchOver': 'Match Over!',
     'elapsedTime': 'Your time: ',

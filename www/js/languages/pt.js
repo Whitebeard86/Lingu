@@ -12,7 +12,7 @@ var PT_LANGUAGE =  {
     'register': 'Registar',
     'waiting': 'À espera de um jogador',
     'invalidLogin': 'O seu user e/ou password são inválidos',
-    'ar': 'Realidade aumentada',
+    'ar': 'Ver o teu perfil em RA',
     'logout': 'Sair',
     'matchOver': 'Partida terminada',
     'elapsedTime': 'O sem tempo: ',
