@@ -17,6 +17,11 @@ var app = angular.module('lingu', ['ionic', 'pascalprecht.translate'])
             }
         });
     })
+
+    .constant("config", {
+        SERVER_ADDRESS: "ws://localhost:8080"
+    })
+
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('login', {

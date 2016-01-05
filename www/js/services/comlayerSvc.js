@@ -2,7 +2,7 @@
 
 angular.module('lingu')
 .factory('comlayerSvc',
-    function ($q) {
+    function ($q, config) {
         var svc = {},
             socket,
             connected;
@@ -20,7 +20,7 @@ angular.module('lingu')
         svc.connect = function () {
             var deferred = $q.defer();
             if (!connected) {
-                socket = io('ws://localhost:8080');
+                socket = io(config.SERVER_ADDRESS);
 
                 socket.on('connect', function () {
                     console.log("connected to server");
