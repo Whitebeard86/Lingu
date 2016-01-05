@@ -1,14 +1,16 @@
 <div class="login-page vertical-align-center wrapper" ng-controller="LoginCtrl">
+    <center><img src="../img/logo.png" alt="logo"></center>
+    <br/><br/>
     <form ng-submit="submitLoginRequest()">
         <input type="text" ng-model="userInfo.username" placeholder="{{'username' | translate}}" required>
         <input type="password" ng-model="userInfo.password" placeholder="{{'password' | translate}}" required>
 
         <p ng-if="errorLogin" class="account-invalid">{{'invalidLogin' | translate }}</p>
-        <input value="{{'login' | translate}}" type="submit"/>
+        <input value="{{'login' | translate}}" type="submit">
 
         <div class="row">
-            <button class="col col-center" ng-click="setLanguage('pt'); $event.preventDefault()">PT</button>
-            <button class="col col-center" ng-click="setLanguage('en'); $event.preventDefault()">EN</button>
+            <button class="col col-center button-sicon" style="background-image:url(../img/pt-flag.png)" ng-click="setLanguage('pt'); $event.preventDefault()">PT</button>
+            <button class="col col-center button-sicon" style="background-image:url(../img/us-flag.png)" ng-click="setLanguage('en'); $event.preventDefault()">EN</button>
         </div>
     </form>
 </div>

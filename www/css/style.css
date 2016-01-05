@@ -24,6 +24,16 @@
     padding: 24px 12px;
 }
 
+.button-sicon {
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left 6px center;
+}
+
+.item-gray {
+    background-color: #eee;
+}
+
 .login-page input[type=text],
 .login-page input[type=password],
 .login-page input[type=email],
@@ -37,8 +47,13 @@ div > form > input[type=submit] {
     margin-top: 10px;
     border-radius: 6px;
     border-top: 1px solid #282828;
-    font-size: 1.1em;
+    font-size: 1.3em;
     padding: 24px 12px;
+}
+
+div > form > input[type=submit] {
+    background: #444;
+    padding: 18px 12px;
 }
 
 button, a {
