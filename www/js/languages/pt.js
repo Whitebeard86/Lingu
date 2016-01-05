@@ -24,5 +24,19 @@ var PT_LANGUAGE =  {
         '3 – Cada jogador possui um Score, o que permitirá ao servidor emparelhar preferencialmente, utilizadores com pontuações próximas ou equivalentes;' +
         '4 – Após a conclusão do emparelhamento, a partida iniciará automaticamente; <br>' +
         '5 – O jogador mais rápido e com maior número de respostas corretas vence a partida;<br>' +
-        '6 – Sempre que o jogador vence uma partida, vê o seu nível incrementado.'
+        '6 – Sempre que o jogador vence uma partida, vê o seu nível incrementado.',
+    'Blue': 'Azul',
+    'Red' : 'Vermelho',
+    'Green': 'Verde',
+    'Magenta': 'Magenta',
+    'Yellow': 'Amarelo',
+    'Black': 'Preto',
+    'Grey': 'Cinza',
+    'Apple': 'Maçã',
+    'Banana': 'Banana',
+    'Orange': 'Laranja',
+    'Pineapple': 'Ananás',
+    'Watermelon': 'Melancia',
+    'Strawberry': 'Morango',
+    'Melon': 'Melão'
 };

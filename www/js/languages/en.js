@@ -24,7 +24,20 @@ var EN_LANGUAGE =  {
         '3 – Each player has a Score, which allows the server to preferably pair users with near or equivalent Scores; <br>' +
         '4 – After a successful pairing, the match starts automatically; <br>' +
         '5 – The fastest player with the great number of correct answers wins the match;<br>' +
-        '6 – Whenever the player wins a match, a Score upgrade will occur.'
-
+        '6 – Whenever the player wins a match, a Score upgrade will occur.',
+    'Blue': 'Blue',
+    'Red' : 'Red',
+    'Green': 'Green',
+    'Magenta': 'Magenta',
+    'Yellow': 'Yellow',
+    'Black': 'Black',
+    'Grey': 'Grey',
+    'Apple': 'Apple',
+    'Banana': 'Banana',
+    'Orange': 'Orange',
+    'Pineapple': 'Pineapple',
+    'Watermelon': 'Watermelon',
+    'Strawberry': 'Strawberry',
+    'Melon': 'Melon'
 
 };

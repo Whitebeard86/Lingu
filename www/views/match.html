@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="choices" ng-if="option">
-            <button ng-repeat="op in option.options" ng-click="checkAnswer(op)">{{op}}</button>
+            <button ng-repeat="op in option.options" ng-click="checkAnswer(op)">{{op | translate}}</button>
         </div>
 
         <div ng-if="!option">
