@@ -78,6 +78,8 @@ angular.module('lingu')
             ]
         };
 
+        var backup = angular.copy(game);
+
 
         function getCategory() {
             return categories[(Math.random() * (categories.length - 1)).toFixed(0)];
@@ -112,6 +114,13 @@ angular.module('lingu')
             options = game[CURRENT_CATEGORY][indexOfOptionFromCategory];
             CURRENT_OPTION = options;
             game[CURRENT_CATEGORY].splice(indexOfOptionFromCategory, 1);
+
+            //play gain
+            if(!options) {
+                game = angular.copy(backup);
+                gameSvc.playMatch();
+            }
+
             return options;
         };
 
