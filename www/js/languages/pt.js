@@ -47,5 +47,6 @@ var PT_LANGUAGE =  {
     'Wink': 'Piscar o olho',
     'Happy': 'Feliz',
     'Praying': 'Rezar',
-    'Crying': 'Chorar'
+    'Crying': 'Chorar',
+    'PlayingFrom': 'A jogar na cidade:',
 };

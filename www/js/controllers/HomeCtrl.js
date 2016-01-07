@@ -19,12 +19,30 @@ angular.module('lingu')
             $scope.userInfo.xp = (level % 1).toFixed(4) * 100;
         }
 
-        (function init() {
+        function refreshUserDetails() {
+            console.log("refreshing user details");
+
             $scope.userInfo.username = playerSvc.playerInfo.name;
             $scope.userInfo.email = playerSvc.playerInfo.email;
             $scope.userInfo.xp = playerSvc.playerInfo.xp;
             $scope.userInfo.avatar = playerSvc.playerInfo.avatar;
+            $scope.userInfo.city = playerSvc.playerInfo.city;
+
             setLevel();
+
+            if(!$scope.$$phase) {
+                $scope.$digest();
+            }
+        }
+
+        (function init() {
+            console.log("Home controller initializing..");
+            refreshUserDetails();
+            playerSvc.getInfoFromServer().then(
+                function() {
+                    refreshUserDetails();
+                }
+            );
         }());
 
 

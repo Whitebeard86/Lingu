@@ -47,5 +47,6 @@ var EN_LANGUAGE =  {
     'Wink': 'Wink',
     'Happy': 'Happy',
     'Praying': 'Praying',
-    'Crying': 'Crying'
+    'Crying': 'Crying',
+    'PlayingFrom': 'Playing from:',
 };

@@ -26,6 +26,40 @@ angular.module('lingu')
             }
         });
 
+        svc.getInfoFromServer = function() {
+            var defer = $q.defer();
+
+            // this will only work if there is a current player info stored (initially from the login phase)
+            if(svc.playerInfo) {
+                comlayerSvc.send({
+                    action: 11 // request updated user info
+                }).then(
+                    function (result) {
+                        result = JSON.parse(result);
+                        if (result) {
+                            svc.playerInfo = {
+                                id: result.id,
+                                name: result.name,
+                                email: result.email,
+                                avatar: result.avatar,
+                                xp: result.experience,
+                                city: result.city
+                            };
+
+                            defer.resolve();
+                        } else {
+                            defer.reject();
+                        }
+                    }, function (error) {
+                        console.log(error);
+                        defer.reject(error);
+                    }
+                );
+            }
+
+            return defer.promise;
+        };
+
         svc.changeState = function(newState) {
           svc.state = newState;
         };
@@ -46,7 +80,8 @@ angular.module('lingu')
                             name: result.name,
                             email: result.email,
                             avatar: result.avatar,
-                            xp: result.experience
+                            xp: result.experience,
+                            city: result.city
                         };
 
                         defer.resolve();
