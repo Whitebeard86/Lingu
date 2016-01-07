@@ -21,7 +21,7 @@ var app = angular.module('lingu', ['ionic', 'pascalprecht.translate'])
     .constant("config", {
         //SERVER_ADDRESS: "wss://nodejs-linguserver.rhcloud.com:8443"
         //SERVER_ADDRESS: "ws://nodejs-linguserver.rhcloud.com:8000"
-        //SERVER_ADDRESS: "ws://172.22.0.141:8000"
+        //SERVER_ADDRESS: "ws://188.251.238.198:8000"
         SERVER_ADDRESS: "ws://localhost:8000"
     })
 
