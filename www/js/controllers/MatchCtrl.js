@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('lingu')
-    .controller('MatchCtrl',
+.controller('MatchCtrl',
     function ($scope, $timeout, playerSvc, comlayerSvc, gameSvc, $interval) {
         $scope.loading = true;
         $scope.currentCount = 30;
         $scope.player1 = playerSvc.playerInfo;
         $scope.player1.correctAnswers = 0;
         $scope.player2 = {};
+        $scope.gameInterval;
 
         playerSvc.changeState(1);
 
@@ -16,8 +17,8 @@ angular.module('lingu')
             action: 3 // matchmaking request
         });
 
-        $scope.sendChatMessage = function(messageID) {
-            if(!gameSvc.matchId) {
+        $scope.sendChatMessage = function (messageID) {
+            if (!gameSvc.matchId) {
                 // unless there is a matchid, the chat cannot be sent.
                 return;
             }
@@ -29,8 +30,23 @@ angular.module('lingu')
             })
         };
 
+        function stopInterval() {
+            if ($scope.gameInterval) {
+                $interval.cancel($scope.gameInterval);
+                $scope.gameInterval = undefined;
+            }
+        }
+
+        $scope.$on('$destroy', function () {
+            stopInterval();
+        });
+
         $scope.timer = function () {
-            $interval(function () {
+            if ($scope.gameInterval) {
+                stopInterval();
+            }
+
+            $scope.gameInterval = $interval(function () {
                 if ($scope.currentCount > 0) {
                     $scope.currentCount--;
                 } else {
@@ -48,7 +64,7 @@ angular.module('lingu')
         $scope.checkAnswer = function (answer) {
             $scope.option = gameSvc.checkAnswer(answer);
             $scope.player1.correctAnswers = gameSvc.getCorrectAnswers();
-            if(!$scope.option) {
+            if (!$scope.option) {
                 // game ended:
                 $scope.elapsedTime = 30 - $scope.currentCount;
                 gameSvc.endMatch();
@@ -70,7 +86,7 @@ angular.module('lingu')
             $scope.$apply();
         });
 
-        $scope.$on('OPPONENT_ANSWERED_CORRECTLY', function(){
+        $scope.$on('OPPONENT_ANSWERED_CORRECTLY', function () {
             $scope.player2.correctAnswers++;
             $scope.$apply();
         });
