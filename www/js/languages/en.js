@@ -39,6 +39,13 @@ var EN_LANGUAGE =  {
     'Watermelon': 'Watermelon',
     'Strawberry': 'Strawberry',
     'Melon': 'Melon',
-    'GoHome': 'Close'
-
+    'GoHome': 'Close',
+    'Confused': 'Confused',
+    'Embarrassed': 'Embarrassed',
+    'Laughing': 'Laughing',
+    'Sad': 'Sad',
+    'Wink': 'Wink',
+    'Happy': 'Happy',
+    'Praying': 'Praying',
+    'Crying': 'Crying'
 };

@@ -4,7 +4,7 @@ angular.module('lingu')
     .factory('gameSvc',
     function (comlayerSvc, $rootScope) {
         var gameSvc = {};
-        var categories = ['COLORS', 'FRUITS'];
+        var categories = ['COLORS', 'FRUITS', 'SMILEYS'];
         var NUMBER_OF_CORRECT_ANSWERS = 0;
         var CURRENT_CATEGORY;
         var CURRENT_OPTION;
@@ -74,6 +74,34 @@ angular.module('lingu')
                     img: '../../img/game/fruit/Strawberry.png',
                     value: 'Strawberry',
                     options: ['Strawberry', 'Pineapple', 'Apple', 'Watermelon']
+                }
+            ],
+            'SMILEYS': [
+                {
+                    img: '../../img/game/smileys/Confused.png',
+                    value: 'Confused',
+                    options: ['Confused', 'Wink', 'Sad', 'Happy']
+                }
+                ,
+                {
+                    img: '../../img/game/smileys/Embarrassed.png',
+                    value: 'Embarrassed',
+                    options: ['Sad', 'Embarrassed', 'Crying', 'Laughing']
+                },
+                {
+                    img: '../../img/game/smileys/Laughing.png',
+                    value: 'Laughing',
+                    options: ['Praying', 'Crying', 'Laughing', 'Smiling']
+                },
+                {
+                    img: '../../img/game/smileys/Sad.png',
+                    value: 'Sad',
+                    options: ['Sad', 'Happy', 'Confused', 'Wink']
+                },
+                {
+                    img: '../../img/game/smileys/Wink.png',
+                    value: 'Wink',
+                    options: ['Wink', 'Sad', 'Happy', 'Crying']
                 }
             ]
         };

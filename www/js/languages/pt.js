@@ -39,5 +39,13 @@ var PT_LANGUAGE =  {
     'Watermelon': 'Melancia',
     'Strawberry': 'Morango',
     'Melon': 'Melão',
-    'GoHome': 'Sair'
+    'GoHome': 'Sair',
+    'Confused': 'Confuso',
+    'Embarrassed': 'Envergonhado',
+    'Laughing': 'Chorar',
+    'Sad': 'Triste',
+    'Wink': 'Piscar o olho',
+    'Happy': 'Feliz',
+    'Praying': 'Rezar',
+    'Crying': 'Chorar'
 };
