@@ -118,6 +118,7 @@ angular.module('lingu')
         }
 
         gameSvc.endMatch = function() {
+            gameSvc.NUMBER_OF_CORRECT_ANSWERS = 0;
             comlayerSvc.send({
                 action: 10, // game end
                 matchId: matchId
