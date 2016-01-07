@@ -1,15 +1,14 @@
-<div class="wrapper" ng-controller="RankingCtrl">
+<ion-content class="wrapper" ng-controller="RankingCtrl">
     <div class="list">
-        <div ng-repeat="p in players track by $index" class="item item-button-right score-player-ctn">
-            <b># {{$index + 1}}</b>
-            <br>
-            <b>Username:</b> {{p.username}}
-            <br>
-            <b>XP:</b> {{p.experience}}
-            <div class="item-thumbnail-right">
-                <img src="{{p.avatar_url}}">
-            </div>
+        <div class="item item-divider">
+            Highscore
+        </div>
+        <div ng-repeat="p in players track by $index" class="item item-avatar">
+            <img src="{{p.avatar_url}}">
+            <h2><b># {{$index + 1}}</b> - {{p.username}}</h2>
+            <p><b>Score:</b> {{p.experience}}</p>
+
         </div>
     </div>
     <button class="btn-back-scores" go-click="home">{{'back' | translate}}</button>
-</div>
+</ion-content>

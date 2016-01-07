@@ -45,7 +45,7 @@
         <h2 class="countdown" ng-if="option" ng-class="{'count-down-red': timerLessThan10S()}">{{currentCount}}</h2>
     </div>
     <div ng-if="loading">
-        <div class="vertical-align-center wrapper">
+        <div class="vertical-align-center wrapper" style="padding: 0px">
             <label class="font-loading">{{'waiting' | translate}}</label>
             <ion-spinner icon="dots"></ion-spinner>
         </div>
