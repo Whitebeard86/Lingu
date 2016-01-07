@@ -168,6 +168,14 @@ angular.module('lingu')
             CURRENT_OPTION = options;
             game[CURRENT_CATEGORY].splice(indexOfOptionFromCategory, 1);
 
+            if(!options) {
+                game[CURRENT_CATEGORY] = backup[CURRENT_CATEGORY];
+                setCurrentCategory();
+                var indexOfOptionFromCategory = getIndexOfOptionFromCategory();
+                options = game[CURRENT_CATEGORY][indexOfOptionFromCategory];
+                CURRENT_OPTION = options;
+                game[CURRENT_CATEGORY].splice(indexOfOptionFromCategory, 1);
+            }
             return options;
         };
 
