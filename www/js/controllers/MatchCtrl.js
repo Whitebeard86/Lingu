@@ -50,9 +50,9 @@ angular.module('lingu')
                 if ($scope.currentCount > 0) {
                     $scope.currentCount--;
                 } else {
+                    stopInterval();
                     $scope.option = false; // force quit..
                     gameSvc.endMatch();
-
                 }
             }, 1000);
         };
