@@ -2,7 +2,7 @@
 
 angular.module('lingu')
     .controller('MatchCtrl',
-    function ($scope, $timeout, playerSvc, comlayerSvc, gameSvc) {
+    function ($scope, $timeout, playerSvc, comlayerSvc, gameSvc, $interval) {
         $scope.loading = true;
         $scope.currentCount = 30;
         $scope.player1 = playerSvc.playerInfo;
@@ -30,10 +30,9 @@ angular.module('lingu')
         };
 
         $scope.timer = function () {
-            $timeout(function () {
+            $interval(function () {
                 if ($scope.currentCount > 0) {
                     $scope.currentCount--;
-                    $scope.timer();
                 } else {
                     $scope.option = false; // force quit..
                     gameSvc.endMatch();
