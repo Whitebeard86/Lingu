@@ -87,6 +87,12 @@ angular.module('lingu')
             return (Math.random() * (game[CURRENT_CATEGORY].length - 1)).toFixed(0);
         }
 
+        gameSvc.endMatch = function() {
+            comlayerSvc.send({
+                action: 10, // game end
+                matchId: matchId
+            })
+        };
 
         function addCorrectAnswer() {
             NUMBER_OF_CORRECT_ANSWERS = NUMBER_OF_CORRECT_ANSWERS + 1;

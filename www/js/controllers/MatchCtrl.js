@@ -46,7 +46,9 @@ angular.module('lingu')
             $scope.option = gameSvc.checkAnswer(answer);
             $scope.player1.correctAnswers = gameSvc.getCorrectAnswers();
             if(!$scope.option) {
+                // game ended:
                 $scope.elapsedTime = 30 - $scope.currentCount;
+                gameSvc.endMatch();
             }
         };
 
