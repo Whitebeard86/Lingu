@@ -29,12 +29,18 @@
         </div>
 
         <div ng-if="!option">
-            <h3 class="match-over">{{'matchOver' | translate}}
+            <h3 class="match-over" style="padding-top: 100px;">
+                {{'matchOver' | translate}}
+            </h3>
+
+            <h2 class="match-over">
                 <br>
                 {{'elapsedTime' | translate}} {{elapsedTime}}
                 <br>
                 {{'yourScore' | translate}} {{player1.correctAnswers}}
-            </h3>
+            </h2>
+
+            <button class="btn-back-scores" go-click="home">{{'GoHome' | translate}}</button>
         </div>
         <h2 class="countdown" ng-if="option" ng-class="{'count-down-red': timerLessThan10S()}">{{currentCount}}</h2>
     </div>

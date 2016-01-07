@@ -38,5 +38,6 @@ var PT_LANGUAGE =  {
     'Pineapple': 'Ananás',
     'Watermelon': 'Melancia',
     'Strawberry': 'Morango',
-    'Melon': 'Melão'
+    'Melon': 'Melão',
+    'GoHome': 'Sair'
 };

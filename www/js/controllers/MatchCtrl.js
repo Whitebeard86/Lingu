@@ -16,6 +16,19 @@ angular.module('lingu')
             action: 3 // matchmaking request
         });
 
+        $scope.sendChatMessage = function(messageID) {
+            if(!gameSvc.matchId) {
+                // unless there is a matchid, the chat cannot be sent.
+                return;
+            }
+
+            comlayerSvc.send({
+                action: 8, // chat message action
+                matchId: gameSvc.matchId,
+                chatMessageId: messageID
+            })
+        };
+
         $scope.timer = function () {
             $timeout(function () {
                 if ($scope.currentCount != 0) {

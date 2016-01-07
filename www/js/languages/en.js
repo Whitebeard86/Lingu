@@ -38,6 +38,7 @@ var EN_LANGUAGE =  {
     'Pineapple': 'Pineapple',
     'Watermelon': 'Watermelon',
     'Strawberry': 'Strawberry',
-    'Melon': 'Melon'
+    'Melon': 'Melon',
+    'GoHome': 'Close'
 
 };
