@@ -22,84 +22,84 @@ angular.module('lingu')
         var game = {
             'COLORS': [
                 {
-                    img: '../../img/game/colors/Blue.png',
+                    img: '././img/game/colors/Blue.png',
                     value: 'Blue',
                     options: ['Red', 'Green', 'Blue', 'Black']
                 }
                 ,
                 {
-                    img: '../../img/game/colors/Green.png',
+                    img: '././img/game/colors/Green.png',
                     value: 'Green',
                     options: ['Gray', 'Black', 'Blue', 'Green']
                 },
                 {
-                    img: '../../img/game/colors/Magenta.png',
+                    img: '././img/game/colors/Magenta.png',
                     value: 'Magenta',
                     options: ['Black', 'Magenta', 'Blue', 'Yellow']
                 },
                 {
-                    img: '../../img/game/colors/Red.png',
+                    img: '././img/game/colors/Red.png',
                     value: 'Red',
                     options: ['Black', 'Red', 'Blue', 'Gray']
                 },
                 {
-                    img: '../../img/game/colors/Yellow.png',
+                    img: '././img/game/colors/Yellow.png',
                     value: 'Yellow',
                     options: ['Yellow', 'Red', 'Black', 'Green']
                 }
             ],
             'FRUITS': [
                 {
-                    img: '../../img/game/fruit/Apple.png',
+                    img: '././img/game/fruit/Apple.png',
                     value: 'Apple',
                     options: ['Apple', 'Banana', 'Orange', 'Pineapple']
                 }
                 ,
                 {
-                    img: '../../img/game/fruit/Banana.png',
+                    img: '././img/game/fruit/Banana.png',
                     value: 'Banana',
                     options: ['Orange', 'Watermelon', 'Pineapple', 'Banana']
                 },
                 {
-                    img: '../../img/game/fruit/Orange.png',
+                    img: '././img/game/fruit/Orange.png',
                     value: 'Orange',
                     options: ['Watermelon', 'Strawberry', 'Orange', 'Banana']
                 },
                 {
-                    img: '../../img/game/fruit/Pineapple.png',
+                    img: '././img/game/fruit/Pineapple.png',
                     value: 'Pineapple',
                     options: ['Watermelon', 'Pineapple', 'Apple', 'Melon']
                 },
                 {
-                    img: '../../img/game/fruit/Strawberry.png',
+                    img: '././img/game/fruit/Strawberry.png',
                     value: 'Strawberry',
                     options: ['Strawberry', 'Pineapple', 'Apple', 'Watermelon']
                 }
             ],
             'SMILEYS': [
                 {
-                    img: '../../img/game/smileys/Confused.png',
+                    img: '././img/game/smileys/Confused.png',
                     value: 'Confused',
                     options: ['Confused', 'Wink', 'Sad', 'Happy']
                 }
                 ,
                 {
-                    img: '../../img/game/smileys/Embarrassed.png',
+                    img: '././img/game/smileys/Embarrassed.png',
                     value: 'Embarrassed',
                     options: ['Sad', 'Embarrassed', 'Crying', 'Laughing']
                 },
                 {
-                    img: '../../img/game/smileys/Laughing.png',
+                    img: '././img/game/smileys/Laughing.png',
                     value: 'Laughing',
                     options: ['Praying', 'Crying', 'Laughing', 'Smiling']
                 },
                 {
-                    img: '../../img/game/smileys/Sad.png',
+                    img: '././img/game/smileys/Sad.png',
                     value: 'Sad',
                     options: ['Sad', 'Happy', 'Confused', 'Wink']
                 },
                 {
-                    img: '../../img/game/smileys/Wink.png',
+                    img: '././img/game/smileys/Wink.png',
                     value: 'Wink',
                     options: ['Wink', 'Sad', 'Happy', 'Crying']
                 }
