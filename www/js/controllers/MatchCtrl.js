@@ -31,9 +31,13 @@ angular.module('lingu')
 
         $scope.timer = function () {
             $timeout(function () {
-                if ($scope.currentCount != 0) {
+                if ($scope.currentCount > 0) {
                     $scope.currentCount--;
                     $scope.timer();
+                } else {
+                    $scope.option = false; // force quit..
+                    gameSvc.endMatch();
+
                 }
             }, 1000);
         };
